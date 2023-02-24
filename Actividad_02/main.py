@@ -76,5 +76,76 @@ def calcularEdad():
     print(edad)
 
 
-calcularEdad()
+#calcularEdad()
 
+def cualesMayor():
+    numero1 = int(input('Ingrese el primer numero'))
+    numero2 = int(input('Ingrese el segundo numero'))
+    numero3 = int(input('Ingrese el tercer numero'))
+
+    if numero1 > numero2 and numero1 > numero3:
+        return 'El numero mas grande es ',str(numero1)
+
+    elif numero2 > numero1 and numero2 > numero3:
+        return 'El numero mas grande es ', str(numero2)
+
+    elif numero3 > numero2 and numero3 > numero1:
+            return 'El numero mas grande es '+ str(numero3)
+
+
+
+
+#print(cualesMayor())
+
+def calculadora():
+    numero1 = int(input('Ingrese el primer numero'))
+    numero2 =   int(input('Ingrese el segundo numero'))
+
+    operador = input("Ingrese + para sumar los números \n Ingrese  - para restar los números \n Ingrese * para multiplicar los números \n Ingrese / para calcular la división del primero con el segundo número \n Ingrese  P para calcular la potencia del primero elevado al segundo número "
+)
+
+    if operador == "+":
+        return numero1 + numero2
+    elif operador == "-":
+        return numero1 - numero2
+
+    elif operador == "*":
+        return numero1 * numero2
+
+
+    elif operador == "P":
+        return numero1 ** numero2
+
+        
+    elif operador == "/":
+        if numero2 == 0 or numero1 == 0:
+            return 'no se puede divir por zero'
+        else :
+            return numero1 / numero2
+   
+
+ #print(calculadora())
+import math
+
+def calcRadio():
+
+
+# Pedir al usuario los datos de la circunferencia y el punto
+    radio = float(input("Ingrese el radio de la circunferencia: "))
+    x_centro = float(input("Ingrese la coordenada x del centro de la circunferencia: "))
+    y_centro = float(input("Ingrese la coordenada y del centro de la circunferencia: "))
+    x_punto = float(input("Ingrese la coordenada x del punto: "))
+    y_punto = float(input("Ingrese la coordenada y del punto: "))
+
+    # Calcular la distancia entre el punto y el centro de la circunferencia
+    distancia = math.sqrt((x_punto - x_centro)**2 + (y_punto - y_centro)**2)
+
+    # Comparar la distancia con el radio de la circunferencia
+    if distancia == radio:
+        print("El punto está sobre la circunferencia")
+    elif distancia < radio:
+        print("El punto está dentro de la circunferencia")
+    else:
+        print("El punto está fuera de la circunferencia")
+
+    
